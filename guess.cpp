@@ -2,7 +2,8 @@
 #include <cstdlib>
 
 int main() {
-                                                          std::cout << "\nGuess The Number between 1-20!!!\n";          std::cout << "You have got only 3 chances!\n";
+        std::cout << "\nGuess The Number between 1-20!!!\n";         
+        std::cout << "You have got only 3 chances!\n";
 
         srand((unsigned) time(NULL));
         int num = 1 + (rand() % 20);

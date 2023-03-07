@@ -1,13 +1,15 @@
 #include <iostream>
-#include <cstdlib>
+#include <random>
 
 int main()
 {
 	std::cout << "\nGuess The Number between 1-20!!!\n";
 	std::cout << "You have got only 3 chances!\n";
 
-	srand((unsigned)time(NULL));
-	int num = 1 + (rand() % 20);
+	std::random_device device;
+	std::default_random_engine engine(device());
+	std::uniform_int_distribution<int> dist(1, 20);
+	int num = 1 + dist(engine);
 	int x;
 
 	for (int i = 0; i < 3; i++)
